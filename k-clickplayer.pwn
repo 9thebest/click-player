@@ -11,7 +11,7 @@ hook OnPlayerClickPlayer(playerid, clickedplayerid, source)
   new string[128];
   if (playerData[playerid][pAdmin] >= 6)
   {
-        new listitems3[] = "1\tเทเลพอร์ตไปหาเขา/เธอ\n2\tเทเลพอร์ตเขามาหาคุณ\n3\tเตะ (ออกจากเซิฟเวอร์)\n4\tแบน (ออกจากเซิฟเวอร์)\n5\tเรียกใช้อาวุธให้เขา/เธอ (Dialog)\n";
+        new listitems3[] = "1\tเทเลพอร์ตไปหาเขา/เธอ\n2\tเทเลพอร์ตเขามาหาคุณ\n3\tเตะ (ออกจากเซิฟเวอร์)\n4\tแบน (ออกจากเซิฟเวอร์)\n";
         format(string, sizeof(string), "คุณต้องการทำอะไรกับ %s' ?", GetPlayerNameEx(clickedplayerid));
 		Dialog_Show(playerid, DIALOG_CLICK, DIALOG_STYLE_LIST, string, listitems3, "ตกลง", "ยกเลิก");
   }
